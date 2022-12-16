@@ -107,11 +107,11 @@
     text-decoration: none;
     color: #0f0e08;
 
-    transition: border-color $animationSpeed;
+    transition: all $animationSpeed;
 
     &:hover {
-      font-weight: 600;
-      color: green;
+      font-size: 16px;
+      color: $color-main;
     }
   }
 
