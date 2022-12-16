@@ -1,16 +1,21 @@
 'use strict';
 
-const xxx = document.getElementById('blur');
+const buttonLabel = document.querySelector('.button__label');
+const buttonLink = document.querySelector('.button__link');
 
 window.addEventListener('hashchange', () => {
   if (window.location.hash === '#menu') {
     document.body.classList.add('page__body--with-menu');
-    xxx.classList.add('page--blur');
     document.querySelector('.header').classList.add('page--blur');
+    document.querySelector('main').classList.add('page--blur');
+    buttonLabel.classList.add('button__non-active');
+    buttonLink.classList.add('button__non-active');
   } else {
     document.body.classList.remove('page__body--with-menu');
-    xxx.classList.remove('page--blur');
     document.querySelector('.header').classList.remove('page--blur');
+    document.querySelector('main').classList.remove('page--blur');
+    buttonLabel.classList.remove('button__non-active');
+    buttonLink.classList.remove('button__non-active');
   }
 });
 
